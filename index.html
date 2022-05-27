@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper sissors</title>
+</head>
+<body>
+    
+
+    <script>
+        let choice=["rock", "paper", "scissors"];
+        function computerPlay(){
+            let randomNumber = Math.floor(Math.random()*3);
+            let computerSeletion = choice[randomNumber];
+            return computerSeletion;
+        }
+        
+        function playerSelection(userChoice){
+            return userChoice.toLocaleLowerCase();
+        }
+        
+        function playgame(com,usr){
+            if (com===usr){
+                return "its tie"
+            }
+            else if (com===choice[0] && usr===choice[1]){
+                return `You win! ${usr} beats ${com}`
+            }
+            
+            else if (com===choice[1] && usr===choice[2]){
+                return `You win! ${usr} beats ${com}`
+            }
+            else if (com===choice[2] && usr===choice[0]){
+                return `You win! ${usr} beats ${com}`
+            }
+            else if (com===choice[1] && usr===choice[0]){
+                return `You Loose! ${com} beats ${usr}`
+            }
+            else if (com===choice[2] && usr===choice[1]){
+                return `You Loose! ${com} beats ${usr}`
+            }
+            else if (com===choice[0] && usr===choice[2]){
+                return `You Loose! ${com} beats ${usr}`
+            }
+        }
+
+        function game(){
+            for (let i=0; i<5 ; i++){
+                let userInput = prompt("Rock Paper or Scissors")
+                let result= playgame(computerPlay(),playerSelection(userInput));
+                console.log(result);
+            }
+        }
+        game()
+       
+    </script>
+</body>
+</html>
