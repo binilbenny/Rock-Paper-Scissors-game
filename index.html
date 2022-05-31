@@ -11,16 +11,17 @@
 
     <script>
         let choice=["rock", "paper", "scissors"];
+        // reondomly return "rock", "paper", or "scissors"
         function computerPlay(){
             let randomNumber = Math.floor(Math.random()*3);
             let computerSeletion = choice[randomNumber];
             return computerSeletion;
         }
-        
+        // user input to case insensitive 
         function playerSelection(userChoice){
             return userChoice.toLocaleLowerCase();
         }
-        
+        // checks the winner of the game 
         function playgame(com,usr){
             if (com===usr){
                 return "its tie"
@@ -45,7 +46,7 @@
                 return `You Loose! ${com} beats ${usr}`
             }
         }
-
+            // calls five rounds plats
         function game(){
             for (let i=0; i<5 ; i++){
                 let userInput = prompt("Rock Paper or Scissors")
