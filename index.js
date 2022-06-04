@@ -317,7 +317,7 @@ scissorsBtn.onclick=()=>{
         }
 
         usrRslt.innerHTML=`<p class= \'title\'>USER</p>\
-        <h1 class="emoji">📃</h1>\
+        <h1 class="emoji">✂️</h1>\
         <h3>Score = ${usrScore}</h3>`
 
         comRslt.classList.add('border1');
